@@ -1,0 +1,38 @@
+#hero h1 {
+    font-size: 4rem;
+    padding: 0.5em;
+    text-align: center;
+    color: var(--pico-primary-inverse);
+    background-color: var(--pico-primary-background);
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+}
+
+#things {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#things article {
+    width: 15rem;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#things article header {
+    background-color: var(--pico-secondary-background);
+}
+
+#things article header h4 {
+    color: var(--pico-secondary-inverse);
+}
+
+
+#things article p:first-of-type {
+    flex: 1;
+}
+
