@@ -1,40 +1,47 @@
-{% extends 'pages/base.jinja' %}
+{%extends 'pages/base.jinja'%}
 
-{% block title %}
-
-    Flask and Supabase Demo
-
-{% endblock %}
+{%block title%}
+    Turso 
+{%endblock%}
 
 
-{% block content %}
-
+{%block content%} 
+    
     <section id="hero">
-        <h1>Flask and Supabase Demo</h1>
+        <h1>Turso Database: The Super Epic Home Page</h1> 
     </section>
-
     <section id="things">
-
-        {% for thing in things %}
+        {%for thing in things%}
 
             <article>
-
                 <header>
-                    <h4>{{ thing["name"] }}</h4>
+                    {{thing.name}}
                 </header>
-
-                <p>{{ thing["description"] }}</p>
-
+                <articleContents>
+                    ${{thing.cost}}
+                    <br>
+                    {{thing.desc}}
+                </articleContents>
                 <footer>
-                    <a href="/thing/{{ thing['id'] }}">More...</a>
-
-                    <a href="/delete/{{ thing['id'] }}">Delete</a>
+                    <a href="/thing/{{thing.id}}">more</a>
+                    <a href="/delete/{{thing.id}}">delete</a>
                 </footer>
-
             </article>
-
-        {% endfor %}
-
+        {%endfor%}
+    </section>
+    
+    <section>
+        <article id="articleForm">
+            <form>
+                <label>Name <input type="text" name="required"></label>
+                <label>Description <input type="text" name="desc"></label>
+                <label>Cost <input type="number" name="cost" min="0"></label>
+                <label>Rating <input type="number" name="rating"></label>
+                <button type="submit">submit</button>
+            </form>
+        </article>
     </section>
 
-{% endblock %}
+
+{%endblock%}
+

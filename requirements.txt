@@ -1,3 +1,3 @@
 Flask
-supabase
+libsql-client
 python-dotenv

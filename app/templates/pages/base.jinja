@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>{% block title %}{% endblock %}</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.lime.min.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.lime.min.css">
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-
 <body>
     <header>
         <nav>
             <ul>
-                <li>Flask and Supabase Demo</li>
+                <li>Turso</li>
             </ul>
-
             <ul>
                 <li><a href="/">Home</a></li>
             </ul>
@@ -25,14 +21,13 @@
     </header>
 
     <main>
-        {% block content %}
-        {% endblock %}
+        {%block content%}
+        {%endblock%}
     </main>
 
     <footer>
-        <p>&copy; 2025 Steve Copley at Waimea College</p>
+        <p>&copy; 2025 Harry Stringer</p>
     </footer>
 
 </body>
-
 </html>

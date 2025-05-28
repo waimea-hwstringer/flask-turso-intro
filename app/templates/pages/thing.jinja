@@ -1,34 +1,35 @@
-{% extends 'pages/base.jinja' %}
+{%extends 'pages/base.jinja'%}
 
-{% block title %}
-
-    Flask and Supabase Demo - Single Thing
-
-{% endblock %}
+{%block title%}
+    Turso - Single Thing
+{%endblock%}
 
 
-{% block content %}
-
-    <section id="things">
-
-        <article>
-
-            <header>
-                <h4>{{ thing["name"] }}</h4>
-            </header>
-
-            <p>{{ thing["description"] }}</p>
-
-            <p>Cost <strong>${{ thing["cost"] }}</strong></p>
-
-            <p>Rating <strong>{{ thing["rating"] }}</strong> / 5</p>
-
-            <footer>
-                Delete
-            </footer>
-
-        </article>
-
+{%block content%} 
+    
+    <section id="hero">
+        <h1>Hello!!!</h1> 
     </section>
+    <section id="things">
+        <article>
+            <header>
+                {{thing.name}}
+            </header>
+            <articleContents>
+                ${{thing.cost}}
+                <br>
+                {{thing.desc}}
+                <br>
+                {{thing.rating}}/10
+            </articleContents>
+            <footer>
+                <a href="/">back</a>
+                <a href="/delete/{{thing.id}}">delete</a>
+            </footer>
+        </article> 
+    </section>
+    
 
-{% endblock %}
+
+{%endblock%}
+

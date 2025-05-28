@@ -1,38 +1,99 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: "Quicksand";
+    font-size: 1.8rem;
+    background-color: var(--pico-text-selection);
+}
+
+nav a {
+    font-size: 1.2rem;
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pico-primary);
+    min-height: 10rem;
+
+}
+
 #hero h1 {
-    font-size: 4rem;
-    padding: 0.5em;
-    text-align: center;
-    color: var(--pico-primary-inverse);
-    background-color: var(--pico-primary-background);
-    border-radius: 1rem;
-    margin-bottom: 3rem;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+#mainText {
+    padding-top: 2rem;
+    padding-left: 2rem;
 }
 
 #things {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
     gap: 2rem;
+    max-width: max-content;
+    flex-wrap: wrap;
+    padding: 2rem;
 }
 
 #things article {
     width: 15rem;
-    border-radius: 1rem;
-
+    min-height: max-content;
     display: flex;
     flex-direction: column;
 }
 
-#things article header {
-    background-color: var(--pico-secondary-background);
+#things header{
+    font-size: 1.5rem;
+    color: var(--pico-primary);
 }
 
-#things article header h4 {
-    color: var(--pico-secondary-inverse);
-}
-
-
-#things article p:first-of-type {
+#things articleContents {
     flex: 1;
 }
 
+#things footer {
+    color: var(--pico-secondary);
+    display: flex;
+    justify-content: space-around;
+}
+
+#things footer a {
+    color: var(--pico-secondary);
+    text-decoration: none;
+}
+
+#things footer a:hover {
+    color: var(--pico-primary);
+
+}
+
+#articleForm {
+    width: 30rem;
+    justify-self: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pico-primary-inverse);
+    min-height: 5rem;
+    margin: 0;
+}
+
+footer p {
+    margin: 0;
+}
