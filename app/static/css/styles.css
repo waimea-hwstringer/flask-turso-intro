@@ -43,9 +43,10 @@ main {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    max-width: max-content;
+    max-width: 90%;
     flex-wrap: wrap;
     padding: 2rem;
+    justify-self: center;
 }
 
 #things article {
